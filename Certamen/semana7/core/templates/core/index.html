@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+   
+
+{%block content %}
+    <img src="{% static 'imagenes/svm.jpg' %}" alt="" class="full-width-image">
+    <div class="texto1" >Portal de Iniciativas Estudiantiles</div>
+    <div class="texto2">Universidad Santa María-Sede Viña del mar</div>
+    <a href="{% url 'proyectos' %}" class="btn btn-warning" id="boton1">Ver Iniciativas</a>
+        
+
+{% endblock %}

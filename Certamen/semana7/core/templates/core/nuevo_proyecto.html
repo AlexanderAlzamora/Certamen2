@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<form action="{%url 'agregar_proyecto'%}" method="post">
+  <div>
+    <h1 >AÑADE UN NUEVO PROYECTO</h1>
+  </div>
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="txtNombreproyecto" class="form-label">Nombre Proyecto</label>
+        <input type="text" class="form-control" id="txtNombreproyecto" name="txtNombreproyecto">
+    </div>
+
+    <div class="mb-3">
+        <label for="txtNombrestudiante" class="form-label">Nombre Estudiante</label>
+        <input type="text" class="form-control" id="txtNombrestudiante" name="txtNombrestudiante">
+    </div>
+    
+    <div class="mb-3">
+      <label for="cboTipo" class="form-label">Tematica</label>
+      <select class="form-select" aria-label="Default select example" id="cboTipo" name="cboTipo">
+          <option selected>Seleccione</option>
+          <option value="Futbol" >Futbol</option>
+          <option value="Software" >Software</option>
+          <option value="Investigacion">Investigacion</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="txtprofesor" class="form-label">Patrocinado por:</label>
+      <input type="text" class="form-control" id="txtprofesor" name="txtprofesor" default value="NO Patrocinado">
+    </div>
+    <div class="mb-3">
+      <label for="txtprofesor" class="form-label">Informacion sobre proyecto</label>
+      <input type="text" class="form-control" id="txtinformacion" name="txtinformacion">
+    </div>
+    <div>
+      <input class="btn btn-primary" id="boton2" type="submit" value="Enviar">
+    </div>
+    
+</form>
+{% endblock %}
